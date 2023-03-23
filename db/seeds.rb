@@ -39,23 +39,12 @@ puts "creating project"
 p1 = Project.create!( name:"Divebox" , description:"Dropbox clone" , key:"1234" , front_lang:"Reactjs, CSS" , back_lang:"Ruby, Rails" , private:true)
 p2 = Project.create!( name:"Bop-Pop" , description:"Souncloud Clone" , key:"1234" , front_lang:"Reactjs" , back_lang:"Ruby, Rails" ,  private:true)
 p3 = Project.create!( name:"Weed2gether" , description:"Qibin's a pothead" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" ,  private:true)
-p4 = Project.create!( name:"Dogs'r Us" , description:"Alan's dog website" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p5 = Project.create!( name:"Pepe's Studio" , description:"Painting Ecommerce website" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" ,  private:true)
-p6 = Project.create!( name:"Ghana Must Go" , description:"Event planner for seasonal travelling to Ghana" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p7 = Project.create!( name:"Aot Tribute Game" , description:"Attack on Titan card game" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p8 = Project.create!( name:"Brandons Bodega" , description:"Brandons new glizzy shop" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p9 = Project.create!( name:"Instaclone" , description:"Instagram website clone" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" ,  private:true)
-p10 = Project.create!( name:"Phase 1 Project" , description:"Javscript project POKEMON BATTLES" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p11 = Project.create!( name:"Phase 2 Project" , description:"REACT SOLAR SYSTEM" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p12 = Project.create!( name:"Phase 3 Project" , description:"JERSEY WYLDLIFE Humane wildlife removal website" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
-p13 = Project.create!( name:"Phase 4 Project" , description:"Coinpod money saving site" , key:"1234" , front_lang:"PURE HTML" , back_lang:"Ruby, Rails" , private:true)
 
 
 puts "Assigning Projects..."
 a1 = Assignment.create(cohort_id:c1.id , project_id: p1.id , user_id:u1.id)
 a2 = Assignment.create(cohort_id:c1.id , project_id: p1.id , user_id:u2.id)
 a3 = Assignment.create(cohort_id:c1.id , project_id: p1.id , user_id:u3.id)
-a4 = Assignment.create(cohort_id:c2.id , project_id: p3.id , user_id:u1.id)
 a5 = Assignment.create(cohort_id:c1.id , project_id: p2.id , user_id:u1.id)
 
 puts "adding Declarations"
