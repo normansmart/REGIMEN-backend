@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
 
   get "/me" , to: "users#show"
-
+  get "/users" , to: "users#index"
   
   delete "/commits/:id" , to: "commits#destroy"
 
@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   post "/memberships" , to: "memberships#create"
 
   post "/assignments" , to: "assignments#create"
+
+  patch "/users" , to: "users#update"
  
+
+  get 'profile' , to: "users#profile"
 
 end

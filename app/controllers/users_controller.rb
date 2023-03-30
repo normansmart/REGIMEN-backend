@@ -59,6 +59,13 @@ class UsersController < ApplicationController
     end
   end
 
+
+ def profile 
+  @user = User.last
+  render json: UserSerializer.new(@user).serializable_hash[:data][:attributes]
+ end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -67,6 +74,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.permit(:username, :password, :first_name, :last_name, :onboarded)
+      params.permit(:username, :password, :first_name, :last_name, :onboarded, :attachment)
     end
 end

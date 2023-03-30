@@ -31,6 +31,16 @@
     <%= form.text_field :last_name %>
   </div>
 
+ <div>
+ <% if @user.attachment.attached? %>
+  <%= attachment_tag @user.attachment, style: "width: 200px; display: block;"%>
+ <% end %>
+
+    <%= form.label :attachment, style: "display: block" %>
+    <%= form.file_field :attachment %>
+    
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

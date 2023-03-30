@@ -7,7 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "seeding users"
-u1 = User.create( first_name:"Norman" , last_name:"Smart" , username:"Ragnosock" , password:"12345" , onboarded:false)
+u1 = User.create( first_name:"Norman" , last_name:"Smart" , username:"Ragnosock" , password:"12345" , onboarded:true)
+
 u2 = User.create( first_name:"Cris" , last_name:"Morales" , username:"Entenduu" , password:"12345" , onboarded:false)
 u3 = User.create( first_name:"Bop" , last_name:"Bopman" , username:"Boppin" , password:"12345" , onboarded:false)
 u4 = User.create( first_name:"Chu" , last_name:"Chavez" , username:"Roenb" , password:"12345" , onboarded:false)
@@ -124,4 +125,6 @@ export default SideBar ")
 puts "adding comment"
 co1 = Comment.create(user_id:u2.id , commit_id:d1.id , comment:"This is pretty nice" )
 
+puts "adding image"
+u1.attachment.attach(io: File.open('app/assets/images/seed_images/eren_background.png'), filename: "eren_background.png", content_type: 'image/png')
 puts "Done" 
