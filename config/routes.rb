@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :settings
   resources :friends
   resources :comments
@@ -30,8 +31,6 @@ Rails.application.routes.draw do
   post "/assignments" , to: "assignments#create"
 
   patch "/users" , to: "users#update"
+
  
-
-  get 'profile' , to: "users#profile"
-
 end

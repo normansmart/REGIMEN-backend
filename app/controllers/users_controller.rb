@@ -23,8 +23,10 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
 
+    
+    @user = User.new(user_params)
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to user_url(@user), notice: "User was successfully created." }
@@ -39,6 +41,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|
+
       if @user.update(user_params)
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
@@ -60,12 +63,6 @@ class UsersController < ApplicationController
   end
 
 
- def profile 
-  @user = User.last
-  render json: UserSerializer.new(@user).serializable_hash[:data][:attributes]
- end
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -74,6 +71,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.permit(:username, :password, :first_name, :last_name, :onboarded, :attachment)
+      params.permit(:username, :password, :first_name, :last_name, :onboarded)
     end
 end

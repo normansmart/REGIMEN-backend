@@ -1,7 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
-
+require 'cloudinary'
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
@@ -31,8 +31,13 @@ module RegimenBackend
     config.api_only = true
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
-
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
+  
+
+Cloudinary.config_from_url("cloudinary://958684911354386:5SVh9caDxNqkgca6CpEmZVrFFY0@dmiq7zpfs")
+Cloudinary.config do |config|
+  config.secure = true
+end
   end
 end

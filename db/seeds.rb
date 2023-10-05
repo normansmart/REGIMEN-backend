@@ -125,6 +125,6 @@ export default SideBar ")
 puts "adding comment"
 co1 = Comment.create(user_id:u2.id , commit_id:d1.id , comment:"This is pretty nice" )
 
-puts "adding image"
-u1.attachment.attach(io: File.open('app/assets/images/seed_images/eren_background.png'), filename: "eren_background.png", content_type: 'image/png')
+# puts "adding image"
+# u1.attachment.attach(io: File.open('app/assets/images/seed_images/eren_background.png'), filename: "eren_background.png", content_type: 'image/png')
 puts "Done" 
